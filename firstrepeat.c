@@ -30,7 +30,18 @@ a[j+1]=temp;
 }
 }}
 b=count;
-for(i=0;i<(n-count);i++)
+for(i=0;i<(n-(count-1));i++)
+{
+for(j=i+1;j<(n-count);j++)
+{
+if(a[i]<a[j])
+{
+temp=a[i];
+a[i]=a[j];
+a[j]=temp;
+}
+}}
+  for(i=0;i<(n-count);i++)
 {
 printf("%d\t",a[i]);
 }
